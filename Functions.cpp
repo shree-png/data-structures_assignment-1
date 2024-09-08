@@ -62,7 +62,7 @@ int* addInteger(int arr[], int& arraysize, int addtoend, int& capacity) {
 
 //function no.4
 int* removeIndex(int arr[], int& arraysize, int indextoremove) {
-	int* newarray = new int[arraysize - 1];
+	int* newarray = new int[arraysize - 1]; //realized last minute that this should be resized to capacity, not arraysize - 1
 	for (int i = 0,j = 0; i < arraysize; i++) {
 		if (i != indextoremove) {
 			newarray[j] = arr[i]; //without j, a weird filler number fills the skipped index
